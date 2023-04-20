@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de uso do DOM</title>
+</head>
+<body>
+    <h1>Exemplo de uso do DOM</h1>
+    <p id="paragrafo">Clique no botão abaixo para alterar o texto deste
+parágrafo:</p>
+    <button id="botao">Clique aqui</button>
+    <button id="limpar">Limpar</button>
+    <button id="dark">Dark Mode</button>
+    <button id="light">Light Mode</button>
+    <script src="script.js"></script>
+
+    <!-- 4°_ Qual a diferença entre as propriedades textContent e innerHTML dos elementos HTML? Cite exemplos.-->
+    
+    <h2>Exemplo diferença entre TextContent e InnerHTML</h2>
+    <p id="demo">Esta frase contem <span>um elemento span</span>.
+    </p>
+
+    <!-- InnerHtml -> Retorna o texto, COM formatações e COM elementos html. -->
+    <button onclick="InnerHTML()">Extrair innerHTML</button>
+
+    <!-- TextContent -> Retorna o text COM formatações, mas sem os elementos html. -->
+    <button onclick="TextContent()">Extrair textContent</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function InnerHTML() {
+      alert(document.getElementById("demo").innerHTML);
+    }
+    
+    function TextContent() {
+      alert(document.getElementById("demo").textContent);
+    }
+    </script>
+</body>
+</html>

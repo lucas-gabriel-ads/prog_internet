@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML e CSS</title>
+    <style>
+        body {
+            font-size: 16px;
+            background: linear-gradient(to left, grey, white);
+        }
+
+        h2 {
+            background-color: darkgray;
+        }
+
+        .roman {
+            list-style-type: upper-roman;
+        }
+
+        .pare {list-style-image: url("imagens/pare.png");}
+        .pro_est {list-style-image: url("imagens/proibioest.jpg");}
+        .animal {list-style-image: url("imagens/animal.jpg");}
+        .frente {list-style-image: url("imagens/frente.jpg");}
+        .pro_passar {list-style-image: url("imagens/propassar.jpg");}
+    </style>
+</head>
+<body>
+    <h1>Minhas Listas Favoritas</h1>
+
+    <h2>Regras de bom comportamento</h2>
+    <ol class="roman">
+        <li>Seja pontual.</li>
+        <li>Largue o seu celular nas refeições.</li>
+        <li>Cumprimente as pessoas.</li>
+        <li>Procure atender ligações em lugares mais isolados.</li>
+        <li>Olhe para a pessoa que está conversando com você.</li>
+    </ol>
+
+    <h2>Meus emojis preferidos</h2>
+    <ul>
+        <li>&#128526</li>
+        <li>&#129300</li>
+        <li>&#129313</li>
+        <li>&#128511</li>
+        <li>&#127863</li>
+    </ul>
+
+    <h2>Placas de trânsito</h2>
+    <ul>
+        <li class="pare">PARE</li>
+        <li class="pro_est">Proibido Estacionar</li>
+        <li class="animal">Animais na pista</li>
+        <li class="frente">Siga em Frente</li>
+        <li class="pro_passar">Proibido Ultrapassagem</li>
+    </ul>
+
+    <h2>Livro Clean Code - Robert C. Martin Series</h2>
+    <ol>
+        <li>Chapter 1 : Clean Code </li>
+        <ul>
+            <li>There Will Be Code</li>
+            <li>Bad Code</li>
+            <li>The Total Cost of Owning a Mess</li>
+            <li>Schools of Thought</li>
+            <li>We Are Authors</li>
+            <li>The boy Scout Rule</li>
+            <li>Prequel and Principles</li>
+            <li>Conclusion</li>
+            <li>Bibliography</li>
+        </ul>
+        <li>Chapter 2 : Meaningful Names</li>
+        <ul>
+            <li>Introduction</li>
+            <li>Use Intention-Revealing Names</li>
+            <li>Avoid Disinformation</li>
+            <li>Make Meaningful Distinctions</li>
+            <li>Use Pronunceable Names</li>
+            <li>Use Searchable Names</li>
+            <li>Avoid Encodings</li>
+            <li>Avoid Mental Mapping</li>
+            <li>Class Names</li>
+            <li>Method Names</li>
+            <li>Don't Be Cute</li>
+            <li>Pick One World per Concept</li>
+            <li>Don't Pun</li>
+            <li>Use Solution Domain Names</li>
+            <li>Use Problem Domain Names</li>
+            <li>Add Meaningful Context</li>
+            <li>Don't Add Gratuitous Context</li>
+            <li>Final Words</li>
+        </ul>
+    </ol>
+</body>
+</html>

@@ -12,38 +12,57 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('imagem').innerHTML = '';
     })
 
-    var seletor = document.getElementsById("seletor");
+    var seletor = document.getElementById("seletor");
     seletor.addEventListener("change", imagemselecionada);
+
+    var checar = document.getElementById('check');
+    checar.addEventListener("click", testecheck())
+
+    var lowup = document.getElementById("upperlower");
+    lowup.addEventListener("change", upperLower);
 });
 
-function imagemselecionada() {
-//     var mario = document.getElementById("marioop")
-//     var luigi = document.getElementById("luigiop")
-//     var cogumelo = document.getElementById("cogumeloop")
-//     var def = document.getElementById("default")
-    
-//     if (def.selected){
-//         document.getElementById("imgselected").innerHTML = '';
-//     }else{
-//         var image2 = document.createElement('img')
-//         image2.id = "image2";
-//         if (mario.selected){
-//             image2.src = ("imagens/" + (document.getElementById("marioop")).value);
-//         }else if (luigi.selected){
-//             image2.src = ("imagens/" + (document.getElementById("luigiop")).value);
-//         }else if (cogumelo.selected){
-//             image2.src = ("imagens/" + (document.getElementById("cogumeloop")).value);
-//         }
-//         document.getElementById("imgselected").appendChild(image2);
-//     }
-    const array = document.getElementsByTagName("opition");
-    for (i=0; i<3; i++){
-        if(array[i].innerHTML === "mario.png"){
-            var image2 = document.createElement('img')
-            image2.id = "image2";
-            image2.src = ("imagens/mario.png");
-            document.getElementById("imgselected").appendChild(image2);
+function upperLower() {
+    var up = document.getElementById("upper")
+    var low = document.getElementById("lower")
+    var texto = documento.getElementById("texto")
+
+    if (up.selected){
+        texto.innerHTML = texto.innerHTML.toUpperCase();
+    }else if (low.selected){
+        texto.innerHTML = texto.innerHTML.toLowerCase();
+    }
+}   
+
+function testecheck() {
+    var opc = document.getElementsByName('foods');
+    for (var i=0; i<opc.length; i++){
+        if (opc[i].checked){
+            document.getElementById("cont").innerHTML = "Marcou mizeravi";
         }
+    }
+}
+
+function imagemselecionada() {
+    var mario = document.getElementById("marioop")
+    var luigi = document.getElementById("luigiop")
+    var cogumelo = document.getElementById("cogumeloop")
+    var def = document.getElementById("default")
+    
+    if (def.selected){
+        document.getElementById("imgselected").innerHTML = '';
+    }else{
+        var image2 = document.createElement('img')
+        image2.id = "image2";
+        if (mario.selected){
+            image2.src = ("imagens/" + (document.getElementById("marioop")).value);
+        }else if (luigi.selected){
+            image2.src = ("imagens/" + (document.getElementById("luigiop")).value);
+        }else if (cogumelo.selected){
+            image2.src = ("imagens/" + (document.getElementById("cogumeloop")).value);
+        }
+        document.getElementById("imgselected").innerHTML = '';
+        document.getElementById("imgselected").appendChild(image2);
     }
 }
 
@@ -57,12 +76,13 @@ function exibirImg() {
     image.id = "image";
     image.src = ("imagens/" + (document.getElementById("img")).value);
     image.alt = ("imagens/" + (document.getElementById("img")).value);
+    document.getElementById("imagem").innerHTML = '';
     document.getElementById("imagem").appendChild(image);
 }
 
 function exibirConteudo() {
     var conteudo = document.getElementById('caixaDeTexto').value;
-    if (conteudo === ''){
+    if (conteudo.trim() === ''){
         alert("Campo vazio!")
     }
     document.getElementById('conteudo').innerHTML = conteudo;
